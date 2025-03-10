@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu-Vox | Interactive Educational Assistant</title>
+    <link rel="stylesheet" href="/static/stylesheet.css">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Edu-Vox</h1>
+            <p class="tagline">Your Voice-Powered Educational Assistant</p>
+        </header>
+        
+        <div class="mode-container">
+            <label for="modeSelector">Learning Mode:</label>
+            <select id="modeSelector">
+                <!-- Options will be populated from backend -->
+            </select>
+        </div>
+        
+        <div class="interaction-area">
+            <div class="wave"></div>
+            <button id="micButton">🎙️ Speak</button>
+            <p id="status">Click the microphone to start...</p>
+            <div class="result-container">
+                <p id="result"></p>
+                <audio id="audioOutput" controls style="display:none;"></audio>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to Use:</h3>
+            <ol>
+                <li>Select a learning mode from the dropdown</li>
+                <li>Click the microphone button and speak clearly</li>
+                <li>Wait for Edu-Vox to process and respond</li>
+                <li>Press Space to toggle the microphone</li>
+            </ol>
+        </div>
+        
+        <footer>
+            <p>Edu-Vox runs locally with TinyLLaMA (1.1B) for privacy and offline use.</p>
+        </footer>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
